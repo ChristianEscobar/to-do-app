@@ -1,4 +1,5 @@
 import React from "react";
+import Task from "./Task";
 
 export default class Tasks extends React.Component {
   constructor(props) {
@@ -11,8 +12,7 @@ export default class Tasks extends React.Component {
   }
 
   showTasks() {
-    console.log(this.props.tasks);
-    return this.props.tasks.map(task => <div key={task}><span>{task}</span></div>);
+    return this.props.tasks.map( (task, index) => <Task key={index} task={task}/>);
   }
 
   render() {

@@ -30,8 +30,8 @@ export default class Form extends React.Component {
   render() {
     return(
       <div>
-        <input type="text" value={this.state.task} onChange={this.handleChange} />
-        <button onClick={this.handleSubmit}>Add Task</button>
+        <input type="text" onChange={this.handleChange} />
+        <button className="btn btn-outline-primary btn-sm" onClick={this.handleSubmit}>Add Task</button>
       </div>
 
     );

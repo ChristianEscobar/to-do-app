@@ -1,6 +1,7 @@
 import React from "react";
 import Form from "./Form";
 import Tasks from "./Tasks";
+import "./Container.css";
 
 
 export default class Container extends React.Component {
@@ -28,10 +29,14 @@ export default class Container extends React.Component {
 
   render() {
     return(
-      <div>
-        <Form addTask={this.addTask}/>
-        <br/>
-        <Tasks tasks={this.state.tasks}/>
+      <div className="container">
+        <div className="row">
+          <div className="col-12">
+            <Form addTask={this.addTask}/>
+            <br/>
+            <Tasks tasks={this.state.tasks}/>
+          </div>
+        </div>
       </div>
     );
   }
